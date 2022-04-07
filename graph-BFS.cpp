@@ -58,7 +58,6 @@ void displayList(){
 	printf("\n\n");
 }
 
-
 void enQueue(int veri){
 	
 	if(rear==9){
@@ -75,8 +74,7 @@ void enQueue(int veri){
 }
 
 
-int deQueue()
-{
+int deQueue(){
 	if(front == -1 || front>rear)
 	{
 		printf("\n Kuyruk Bos");
@@ -102,8 +100,6 @@ bool isQueueEmpty(){
 	}
 }
 
-
-
 int color[9];
 int pred[9];
 int d[9];
@@ -113,13 +109,11 @@ int d[9];
 // d ; -1=yok
 
 void startBFS(){
-	
 	for(int i=0;i<9;i++){
 		color[i] = 1;
 		d[i] = -1;
 		pred[i] = -1;
 	}
-	
 	color[8] = 2;
 	d[8] = 0;
 	pred[8] = -1;
@@ -171,9 +165,6 @@ void startBFS(){
 	
 }
 
-
-
-
 int controlMatris = 0;
 void readFile(int matris[9][9]){
 	
@@ -210,15 +201,9 @@ void displayMatris(int matris[9][9]){
 	}else{
 		printf("\n Once grafi dosyadan okumalisiniz..\n");
 	}
-	
 }
 
-
-
-
 int main(){
-	
-	
 	int choice=1;
 	initializeList();
 	
@@ -263,12 +248,8 @@ int main(){
 				}
 				break;	
 			default : 
-				printf("\n\n Hatali numara girdiniz.\n");	
-					
+				printf("\n\n Hatali numara girdiniz.\n");			
 		}
 	}
-	
-	
-	
 	return 0;
 }
